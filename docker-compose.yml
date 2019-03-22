@@ -1,0 +1,21 @@
+# docker-compose.yml
+version: '2'
+
+services:
+  mongodb:
+    image: mongo:3.4
+    ports:
+      - "27017:27017"
+    volumes:
+      - /data/configdb
+      - /data/db
+
+  server:
+    build: .
+    ports:
+     - "1337:1337"
+    environment: 
+      DATABASE_URI: mongodb://mongodb:27017/app
+    volumes:
+     - .:/app
+  

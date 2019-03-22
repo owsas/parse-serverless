@@ -1,0 +1,7 @@
+.serverless
+.env.production
+node_modules
+logs
+.DS_Store
+out
+playground

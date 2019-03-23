@@ -1,0 +1,22 @@
+# serverless.yml
+
+service: 
+  name: parse-serverless
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'us-east-1'}
+
+functions:
+  app:
+    handler: out/index.handler
+    events:
+      - http: ANY /
+      - http: 'ANY {proxy+}'
+    memorySize: 512 # Overwrite the default memory size. Default is 1024
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-pseudo-parameters

@@ -28,6 +28,7 @@
     "@types/parse": "^2.2.1",
     "jest": "^23.6.0",
     "serverless-plugin-typescript": "^1.1.5",
+    "serverless-pseudo-parameters": "^2.4.0",
     "ts-jest": "^24.0.0",
     "ts-node": "^8.0.3",
     "tslint": "^5.14.0",

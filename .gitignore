@@ -1,5 +1,6 @@
 .serverless
 .env.production
+.env.dev
 node_modules
 logs
 .DS_Store

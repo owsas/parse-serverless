@@ -9,7 +9,7 @@ const app = express();
 
 const STAGE = process.env.STAGE;
 
-const cloud = (global as any).__TESTING__ ?
+const cloud = ((global as any).__TESTING__ || process.env.TS) ?
   path.resolve(__dirname, "cloud.ts") :
   path.resolve(__dirname, "cloud.js");
 

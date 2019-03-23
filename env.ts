@@ -8,5 +8,5 @@ if (process.env.NODE_ENV === "production") {
 }
 
 dotenv.config({
-  path: path.resolve(path.join(__dirname, "..", filename )),
+  path: path.resolve(path.join(__dirname, filename )),
 });
